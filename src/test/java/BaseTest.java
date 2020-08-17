@@ -13,6 +13,7 @@ public class BaseTest {
     WebDriver driver;
     public MainPage mainPage;
     public MacBookPage macBookPage;
+    private LoginPage loginPage;
 
     @BeforeEach
     public void start() {
@@ -22,6 +23,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         mainPage = PageFactory.initElements(driver, MainPage.class);
         macBookPage = PageFactory.initElements(driver, MacBookPage.class);
+        loginPage = PageFactory.initElements(driver,LoginPage.class);
     }
 
 

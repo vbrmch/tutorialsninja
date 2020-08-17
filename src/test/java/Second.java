@@ -1,3 +1,4 @@
+
 import org.junit.jupiter.api.Test;
 
 public class Second extends BaseTest {
@@ -8,6 +9,8 @@ public class Second extends BaseTest {
     loginPage.enterLogin("awdawd@mail.ru");
     loginPage.enterPass("123456789");
 }
-}
+
 //"awdawd@mail.ru"
 //123456789
+
+}
