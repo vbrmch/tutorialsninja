@@ -7,30 +7,26 @@ public class BasePage {
     public WebDriver driver;
     public WebDriverWait wait;
 
+
     public BasePage(WebDriver webDriver) {
         this.driver = webDriver;
-        wait = new WebDriverWait(webDriver,10);
+        wait = new WebDriverWait(webDriver, 10);
     }
 
-    public void waitVisibilityElement(By waitElement){
-wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(waitElement));
+
+    public void waitVisibilityElement(By waitElement) {
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(waitElement));
     }
 
-    public String getName(By element){
-        waitVisibilityElement(element);
-       return driver.findElement(element).getText();
-    }
-
-    public void click(By element){
+    public void click(By element) {
         waitVisibilityElement(element);
         driver.findElement(element).click();
     }
-    public void isDisplayed(By element){
+
+    public void isDisplayed(By element) {
         waitVisibilityElement(element);
         driver.findElement(element).isDisplayed();
     }
-
-
 
 
 }

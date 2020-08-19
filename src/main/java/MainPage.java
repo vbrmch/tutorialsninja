@@ -17,13 +17,12 @@ public class MainPage extends BasePage {
     }
 
 
-    public MainPage chooseDevice(String device) {
+    public String chooseDevice(String device) {
         click(By.xpath("//div/h4/a[text()='" + device + "']"));
-        return this;
+        return device;
     }
 
     public LoginPage clickLogin() {
-        //click(By.xpath("/span[text()='My Account']"));
 
         driver.findElement(By.xpath("//span[text()='My Account']")).click();
         waitVisibilityElement(By.xpath("//li/a[text()='Login']"));
@@ -31,7 +30,10 @@ public class MainPage extends BasePage {
         return new LoginPage(driver);
     }
 
-
+    public ShoppingCart clickShoppingCart(){
+        driver.findElement(By.xpath("//li//span[text()='Shopping Cart']")).click();
+        return new ShoppingCart(driver);
+    }
 
 
 }

@@ -13,7 +13,9 @@ public class BaseTest {
     WebDriver driver;
     public MainPage mainPage;
     public MacBookPage macBookPage;
-    private LoginPage loginPage;
+    public LoginPage loginPage;
+    public ShoppingCart shoppingCart;
+    public AccountPage accountPage;
 
     @BeforeEach
     public void start() {
@@ -23,7 +25,9 @@ public class BaseTest {
         driver.manage().window().maximize();
         mainPage = PageFactory.initElements(driver, MainPage.class);
         macBookPage = PageFactory.initElements(driver, MacBookPage.class);
-        loginPage = PageFactory.initElements(driver,LoginPage.class);
+        loginPage = PageFactory.initElements(driver, LoginPage.class);
+        shoppingCart = PageFactory.initElements(driver, ShoppingCart.class);
+        accountPage = PageFactory.initElements(driver, AccountPage.class);
     }
 
 

@@ -1,12 +1,8 @@
-
-
 import org.junit.jupiter.api.Assertions;
-
 import org.junit.jupiter.api.Test;
 
 
-
-public class First extends BaseTest {
+public class MainPageTest extends BaseTest {
 
     //@RepeatedTest(3)
 
@@ -18,8 +14,6 @@ public class First extends BaseTest {
         String macBookPageText = macBookPage.getText();
         Assertions.assertEquals("MacBook", macBookPageText);
     }
-
-
 
 
 }
