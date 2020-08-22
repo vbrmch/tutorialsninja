@@ -10,4 +10,6 @@ public class AccountPage extends BasePage{
         return driver.findElement(By.xpath("//h2[text()='My Account']")).getText();
     }
 
+
+
 }
