@@ -6,12 +6,13 @@ public class LoginPage extends BasePage {
         super(webDriver);
     }
 
-    public String getTextWrongLogIn(){
-        return driver.findElement(By.xpath("//div[text()=' Warning: No match for E-Mail Address and/or Password.']")).getText();
+    public String getTextWrongLogIn() {
+        waitVisibilityElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']"));
+        return driver.findElement(By.xpath("//div[@class='alert alert-danger alert-dismissible']")).getText();
     }
 
 
-    public void logIntoAccount(String login,String pass){
+    public void logIntoAccount(String login, String pass) {
         driver.findElement(By.xpath("//input[@id='input-email']")).sendKeys(login);
         driver.findElement(By.xpath("//input[@id='input-password']")).sendKeys(pass);
         driver.findElement(By.xpath("//input[@value='Login']")).click();
